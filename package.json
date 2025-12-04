@@ -1,7 +1,6 @@
 {
   "name": "cypress-project",
   "version": "1.0.0",
-  "description": "",
   "keywords": [],
   "homepage": "https://github.com/AnastasiiaLebediuk/Cypress-Project#readme",
   "bugs": {
@@ -183,5 +182,6 @@
   },
   "devDependencies": {
     "cypress": "^15.7.1"
-  }
+  },
+  "description": ""
 }

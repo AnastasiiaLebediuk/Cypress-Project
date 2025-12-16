@@ -7,6 +7,25 @@
 // commands please read more here:
 // https://on.cypress.io/custom-commands
 // ***********************************************
+
+import { HomePage } from "../Helpers/PageObjects/HomePage";
+
+const homePage = new HomePage();
+
+Cypress.Commands.overwrite("type", (originalFn, element, text, options) => {
+  if (options && options.sensitive) {
+    options.log = false;
+
+    Cypress.log({
+      $el: element,
+      name: "type",
+      message: "*".repeat(text.length),
+    });
+  }
+
+  return originalFn(element, text, options);
+});
+
 //
 //
 // -- This is a parent command --

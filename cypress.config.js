@@ -3,8 +3,15 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {},
-       baseUrl: 'https://qauto.forstudy.space/',
+       reporter: "mochawesome",
+    reporterOptions: {
+      reportDir: "cypress/reports",
+      overwrite: false,
+      html: true,
+      json: true,
+    },
   },
+
   viewportWidth: 1500,
   viewportHeight: 1100,
 });

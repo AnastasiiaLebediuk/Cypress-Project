@@ -1,28 +1,17 @@
 import BaseElement from "../Elements/BaseElement";
 
-// let counter = 0;
 
-// export function generateUser(){
-//     counter++;
-//     const timestamp = Date.now();
-
-//     return{
-
-//         email: `test${timestamp}${counter}@test.com`,
-//         password: `Test${timestamp}`
-//     }
-// }
 
 export class HomePage {
 
-    navigate(){
-        cy.visit('/',{
-            auth:{
-                username: "guest",
-                password: "welcome2qauto",
-            },
-        });
-    }
+    // navigate(){
+    //     cy.visit('/',{
+    //          auth:{
+    //             username: "guest",
+    //             password: "welcome2qauto",
+    //         },
+    //     });
+    // }
 
     #baseElement = new BaseElement();
 
@@ -52,7 +41,7 @@ export class HomePage {
         return this.#baseElement.getElement('button.btn.btn-outline-white.header_signin');
     }
     get inputSignInEmail() {
-        return this.#baseElement.getElement("#signinEmail")
+        return this.#baseElement.getElement("#signinEmail");
     }
     get inputSignInPassword() {
         return this.#baseElement.getElement("#signinPassword");

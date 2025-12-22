@@ -15,7 +15,11 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:qauto1": "cypress run --config-file cypress.config.qauto1.js",
+    "cy:qauto2": "cypress run --config-file cypress.config.qauto2.js",
+    "cy:open:qauto1": "cypress open --config-file cypress.config.qauto1.js",
+    "cy:open:qauto2": "cypress open --config-file cypress.config.qauto2.js"
   },
   "dependencies": {
     "aggregate-error": "^3.1.0",
@@ -181,7 +185,8 @@
     "yauzl": "^2.10.0"
   },
   "devDependencies": {
-    "cypress": "^15.7.1"
+    "cypress": "^15.7.1",
+    "mochawesome": "^7.1.4"
   },
   "description": ""
 }

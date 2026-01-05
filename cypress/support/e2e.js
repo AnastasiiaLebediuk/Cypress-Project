@@ -15,3 +15,10 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+Cypress.Commands.add('createExpense', (expense) => {
+  return cy.request({
+    method: 'POST',
+    url: '/api/expenses',
+    body: expense,
+  });
+})

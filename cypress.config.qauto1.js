@@ -3,12 +3,12 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   e2e: {
     
-       baseUrl: 'https://qauto.forstudy.space/',
+       baseUrl: "https://qauto.forstudy.space/",
 
-       env:{
-                email: "nasta@lebediuk.com",
-                password: "TestPassword123",
-            },
+      //  env:{
+      //           email: "nasta@lebediuk.com",
+      //           password: "TestPassword123",
+      //       },
   },
 
 });

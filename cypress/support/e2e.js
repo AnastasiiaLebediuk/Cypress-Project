@@ -21,4 +21,4 @@ Cypress.Commands.add('createExpense', (expense) => {
     url: '/api/expenses',
     body: expense,
   });
-});
+})

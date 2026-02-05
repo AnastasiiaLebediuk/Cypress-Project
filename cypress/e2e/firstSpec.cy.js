@@ -1,5 +1,5 @@
-describe('template spec', () => {
-  it('passes', () => {
-    cy.visit('/')
-  })
-})
+// describe.skip('template spec', () => {
+//   it('passes', () => {
+//     cy.visit('/')
+//   })
+// })

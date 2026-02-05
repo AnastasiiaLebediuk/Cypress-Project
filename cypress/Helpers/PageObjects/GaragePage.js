@@ -1,35 +1,30 @@
-import BaseElement from "../Elements/BaseElement";
-
+// import BaseElement from "../Elements/BaseElement";
+import BaseElement from "../Elements/BaseElement.js";
 
 export class GaragePage {
+  // #baseElement = new BaseElement();
 
-    // #baseElement = new BaseElement();
+  get addCarBtn() {
+    return cy.get(' .btn.btn-primary');
+  }
 
-     get addCarBtn() {
-        return cy.contains('button.btn.btn-primary', 'Add car');
-    }
+  get brandField() {
+    return cy.get('[formcontrolname="brand"]');
+  }
 
+  get modelField() {
+    return cy.get('[formcontrolname="model"]');
+  }
 
-    get brandField (){
-        return cy.get('[formcontrolname="brand"]');
-    }
+  get mileageField() {
+    return cy.get('[formcontrolname="mileage"]');
+  }
 
-    get modelField (){
-        return cy.get('[formcontrolname="model"]');
-    }
+  get addButton() {
+    return cy.get('.modal-footer .btn.btn-primary');
+  }
 
-    get mileageField (){
-        return cy.get('[formcontrolname="mileage"]');
-    }
-
-    get addButton() {
-    return cy.get('.modal-footer').contains('button.btn.btn-primary', 'Add');
-    }
-
-    get garageButton(){
-        return cy.get('.btn.btn-white.btn-sidebar.sidebar_btn.-active')
-    }
-
-
-
+  get garageButton() {
+    return cy.get(".btn.btn-white.btn-sidebar.sidebar_btn.-active");
+  }
 }

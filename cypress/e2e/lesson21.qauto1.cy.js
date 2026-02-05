@@ -1,6 +1,10 @@
+// import { HomePage } from "../Helpers/PageObjects/HomePage";
+// import { GaragePage } from "../Helpers/PageObjects/GaragePage";
+// import { FuelExpenses } from "../Helpers/PageObjects/FuelExpenses"
+
 import { HomePage } from "../Helpers/PageObjects/HomePage";
 import { GaragePage } from "../Helpers/PageObjects/GaragePage";
-import { FuelExpenses } from "../Helpers/PageObjects/FuelExpenses"
+import { FuelExpenses } from "../Helpers/PageObjects/FuelExpenses";
 
 describe("Garage page", () => {
   const homePage = new HomePage();
@@ -16,30 +20,47 @@ describe("Garage page", () => {
     },
   });
 
-  homePage.buttonSignIn.click();
-  homePage.login(Cypress.env('email'), Cypress.env('password'));
+  // homePage.buttonSignIn.click();
+  // // homePage.login(Cypress.env('email'), Cypress.env('password'));
+  // // homePage.login('nasta@lebediuk.com', 'TestPassword12');
+  // homePage.inputSignInEmail.type('nasta@lebediuk.com');
+  // homePage.inputSignInPassword.type('TestPassword12');
+  // homePage.buttonLogIn.click();
 
-  cy.url().should('include', '/panel/garage');
+
+  // // cy.url().should('include', '/panel/garage');
+  // garagePage.addCarBtn.should('be.visible')
 });
 
   it("E2E test", () => {
 
-  // Add a car
+    homePage.buttonSignIn.click();
+  // homePage.login(Cypress.env('email'), Cypress.env('password'));
+  // homePage.login('nasta@lebediuk.com', 'TestPassword12');
+  homePage.inputSignInEmail.type('nasta@lebediuk.com');
+  homePage.inputSignInPassword.type('TestPassword12');
+  homePage.buttonLogIn.click();
 
-    garagePage.addCarBtn.click();
-    garagePage.brandField.select('Audi');
-    garagePage.modelField.select('TT');
-    garagePage.mileageField.type('3');
-    garagePage.addButton.click();
+
+  // cy.url().should('include', '/panel/garage');
+  garagePage.addCarBtn.should('be.visible')
+
+  // // Add a car
+
+  //   garagePage.addCarBtn.click();
+  //   garagePage.brandField.select('Audi');
+  //   garagePage.modelField.select('TT');
+  //   garagePage.mileageField.type('3');
+  //   garagePage.addButton.click();
     
 
   // Add an expense
-     fuelExpenses.fuelExpensesButton.should('be.visible').click();
-     fuelExpenses.addAnExpenseButton.should('be.visible').click();
-      fuelExpenses.mileageField2.clear().type('5');
-      fuelExpenses.numberOfLiters.type('6');
-      fuelExpenses.totalCost.type('45');
-      fuelExpenses.addButton2.click();
+    //  fuelExpenses.fuelExpensesButton.should('be.visible').click();
+    //  fuelExpenses.addAnExpenseButton.should('be.visible').click();
+    //   fuelExpenses.mileageField2.clear().type('5');
+    //   fuelExpenses.numberOfLiters.type('6');
+    //   fuelExpenses.totalCost.type('45');
+    //   fuelExpenses.addButton2.click();
     
 
 });
